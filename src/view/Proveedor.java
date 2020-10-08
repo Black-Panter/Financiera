@@ -10,13 +10,13 @@ import Entity.ProveedorE;
  *
  * @author FRANK
  */
-public class Proveerdor extends javax.swing.JPanel {
+public class Proveedor extends javax.swing.JPanel {
     private ProveedorC pe;
     private ProveedorE p;
     /**
      * Creates new form Proveerdor
      */
-    public Proveerdor() {
+    public Proveedor() {
         initComponents();
         pe=new ProveedorC();
         p=new ProveedorE();
