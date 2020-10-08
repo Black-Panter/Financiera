@@ -41,7 +41,7 @@ public class ProveedorC {
         return p;
     }
     private void fillComputer() {
-        proveedor.add(new ProveedorE(987655432, "Jimenez"));
+        proveedor.add(new ProveedorE(987655432, "Jimenez", "Kra 4 n56 Sur 66", "Bogotá", 5682743));
     }
     
 }

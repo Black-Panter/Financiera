@@ -109,5 +109,7 @@ public void setTelefono(int Tel){
 public void setCorreo(String mail){
     this.correo=mail;
 }
+
+
     
 }

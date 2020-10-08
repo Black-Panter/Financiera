@@ -41,7 +41,7 @@ public class ClienteC {
     }
 
     private void fillComputer() {
-       cliente.add(new ClienteE(1234567890, "C.C","Frank Stid","Jimenez Benavides", 22-12-2001, 18, 123456789, "fsjimenezb"));
+       cliente.add(new ClienteE(1234567890, "C.C","Frank Stid","Jimenez Benavides", 22-12-2001, 18, 123456789, "fsjimenezb@sanmateo.edu.co"));
     }
     
 }
