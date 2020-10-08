@@ -19,6 +19,18 @@ public class ClienteE {
     private int edad;
     private int telefono;
     private String correo;
+    
+public ClienteE(){
+    
+    this.id=0;
+    this.tipoId="";
+    this.nombres="";
+    this.apellidos="";
+    this.fecha_nac=0;
+    this.edad=0;
+    this.telefono=0;
+    this.correo="";  
+}
 
 public ClienteE(int Id, String TipoId, String Nombres, String Apellidos, int Fecha_Nac, int Edad, int Telefono, String Correo){
     
@@ -31,18 +43,6 @@ public ClienteE(int Id, String TipoId, String Nombres, String Apellidos, int Fec
     this.telefono=Telefono;
     this.correo=Correo;
        
-}
-
-public ClienteE(){
-    
-    this.id=0;
-    this.tipoId="";
-    this.nombres="";
-    this.apellidos="";
-    this.fecha_nac=0;
-    this.edad=0;
-    this.telefono=0;
-    this.correo="";  
 }
 
 public int getId(){
@@ -82,8 +82,8 @@ public void setId(int ID){
     this.id=ID;
 }
 
-public void setTipo_Id(int TipoId){
-    this.tipoId=tipoId;
+public void setTipo_Id(String TipoId){
+    this.tipoId=TipoId;
 }
 
 public void setNombres(String Nomb){
