@@ -81,7 +81,7 @@ public class Proveedor extends javax.swing.JPanel {
             }
         });
 
-        jButton8.setText("Borrar");
+        jButton8.setText("Limpiar");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -209,7 +209,7 @@ public class Proveedor extends javax.swing.JPanel {
             idTF.setText(Integer.toString(p.getId()));
             NomTF.setText(p.getNombre());
             DirecTF.setText(p.getDireccion());
-            NomTF.setText(p.getNombre());
+            CiudadTF.setText(p.getCiudad());
             TelTF.setText(Integer.toString(p.getTelefono()));
             }
     }//GEN-LAST:event_jButton7ActionPerformed

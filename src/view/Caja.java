@@ -4,18 +4,22 @@
  * and open the template in the editor.
  */
 package view;
-
+import Controller.RCajaC;
+import Entity.RCajaE;
 /**
  *
  * @author FRANK
  */
 public class Caja extends javax.swing.JPanel {
-
+    private RCajaC rc;
+    private RCajaE c;
     /**
      * Creates new form Caja
      */
     public Caja() {
         initComponents();
+        rc=new RCajaC();
+        c=new RCajaE();
     }
 
     /**
@@ -27,19 +31,315 @@ public class Caja extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        CodTF = new javax.swing.JTextField();
+        FechaTF = new javax.swing.JTextField();
+        CityTF = new javax.swing.JTextField();
+        IDTF = new javax.swing.JTextField();
+        DirecTF = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        IdBTF = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        NumcTF = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        DebitosTF = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        CreditosTF = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        FirmaTF = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        SelloTF = new javax.swing.JTextField();
+
+        jLabel8.setText("Caja");
+
+        jLabel9.setText("Codigo :");
+
+        jLabel10.setText("Fecha :");
+
+        jLabel11.setText("Ciudad :");
+
+        jLabel12.setText("ID Cliente  :");
+
+        jLabel13.setText("Dirección :");
+
+        jButton5.setText("Guardar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Editar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("Buscar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("Limpiar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("ID Banco :");
+
+        jLabel2.setText("Numero de cuenta :");
+
+        jLabel3.setText("Debitos :");
+
+        jLabel4.setText("Creditos :");
+
+        jLabel5.setText("Firma :");
+
+        jLabel6.setText("Sello :");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton5)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton7)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton6))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(IDTF)
+                            .addComponent(CityTF, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(CodTF, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(FechaTF, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(DirecTF, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                            .addComponent(IdBTF)
+                            .addComponent(NumcTF)
+                            .addComponent(DebitosTF)
+                            .addComponent(CreditosTF)
+                            .addComponent(FirmaTF)
+                            .addComponent(SelloTF)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addComponent(jLabel8)))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(CodTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(FechaTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(CityTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(IDTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(DirecTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(IdBTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(NumcTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(DebitosTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(CreditosTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(FirmaTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(SelloTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6)
+                    .addComponent(jButton7)
+                    .addComponent(jButton8))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        c.setCodigo(Integer.parseInt(CodTF.getText()));
+        c.setFecha(Integer.parseInt(FechaTF.getText()));
+        c.setCiudad(CityTF.getText());
+        c.setId_cliente(Integer.parseInt(IDTF.getText()));
+        c.setDireccion((DirecTF.getText()));
+        c.setId_banco(Integer.parseInt(IdBTF.getText()));
+        c.setNumero_cuenta(Integer.parseInt(NumcTF.getText()));
+        c.setDebitos(Integer.parseInt(DebitosTF.getText()));
+        c.setCreditos(Integer.parseInt(CreditosTF.getText()));
+        c.setFirma((FirmaTF.getText()));
+        c.setSello((SelloTF.getText()));
+        
+        
+        
+        CodTF.setText("");
+        FechaTF.setText("");
+        CityTF.setText("");
+        IDTF.setText("");
+        DirecTF.setText("");
+        IdBTF.setText("");
+        NumcTF.setText("");
+        DebitosTF.setText("");
+        CreditosTF.setText("");
+        FirmaTF.setText("");
+        SelloTF.setText("");
+
+        rc.createRCajaE(c);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        c.setCodigo(Integer.parseInt(CodTF.getText()));
+        c.setFecha(Integer.parseInt(FechaTF.getText()));
+        c.setCiudad(CityTF.getText());
+        c.setId_cliente(Integer.parseInt(IDTF.getText()));
+        c.setDireccion(DirecTF.getText());
+        c.setId_banco(Integer.parseInt(IdBTF.getText()));
+        c.setNumero_cuenta(Integer.parseInt(NumcTF.getText()));
+        c.setDebitos(Integer.parseInt(DebitosTF.getText()));
+        c.setCreditos(Integer.parseInt(CreditosTF.getText()));
+        c.setFirma(FirmaTF.getText());
+        c.setSello(SelloTF.getText());
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        c=null;
+        c=rc.findRCajaE(Integer.parseInt(CodTF.getText()));
+        if(c!=null){
+            CodTF.setText(Integer.toString(c.getCodigo()));
+            FechaTF.setText(Integer.toString(c.getFecha()));
+            CityTF.setText(c.getCiudad());
+            IDTF.setText(Integer.toString(c.getId_cliente()));
+            DirecTF.setText(c.getDireccion());
+            IdBTF.setText(Integer.toString(c.getId_banco()));
+            NumcTF.setText(Integer.toString(c.getNumero_cuenta()));
+            DebitosTF.setText(Integer.toString(c.getDebitos()));
+            CreditosTF.setText(Integer.toString(c.getCreditos()));
+            FirmaTF.setText(c.getFirma());
+            SelloTF.setText(c.getSello());
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        CodTF.setText("");
+        FechaTF.setText("");
+        CityTF.setText("");
+        IDTF.setText("");
+        DirecTF.setText("");
+        IdBTF.setText("");
+        NumcTF.setText("");
+        DebitosTF.setText("");
+        CreditosTF.setText("");
+        FirmaTF.setText("");
+        SelloTF.setText("");
+    }//GEN-LAST:event_jButton8ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CityTF;
+    private javax.swing.JTextField CodTF;
+    private javax.swing.JTextField CreditosTF;
+    private javax.swing.JTextField DebitosTF;
+    private javax.swing.JTextField DirecTF;
+    private javax.swing.JTextField FechaTF;
+    private javax.swing.JTextField FirmaTF;
+    private javax.swing.JTextField IDTF;
+    private javax.swing.JTextField IdBTF;
+    private javax.swing.JTextField NumcTF;
+    private javax.swing.JTextField SelloTF;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
