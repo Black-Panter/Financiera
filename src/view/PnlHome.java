@@ -5,7 +5,7 @@
  */
 package view;
 
-import com.sun.awt.AWTUtilities;
+//import com.sun.awt.AWTUtilities;
 
 /**
  *

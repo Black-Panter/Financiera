@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package view;
-import com.sun.awt.AWTUtilities;
+//import com.sun.awt.AWTUtilities;
 
 /**
  *
