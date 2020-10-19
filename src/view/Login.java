@@ -1,7 +1,7 @@
 
 package view;
 
-import com.sun.awt.AWTUtilities;
+//import com.sun.awt.AWTUtilities;
 import javax.swing.UIManager;
 
 /**
@@ -14,7 +14,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setLocationRelativeTo(this);
-        AWTUtilities.setWindowOpaque(this, false);
+//        AWTUtilities.setWindowOpaque(this, false);
     }
 
     /**
