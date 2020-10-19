@@ -1,26 +1,20 @@
+
 package view;
 
 import com.sun.awt.AWTUtilities;
 import javax.swing.UIManager;
 
-
 /**
  *
- * @author Juan Andres Florez Peinado
+ * @author Andres Florez
  */
 public class Login extends javax.swing.JFrame {
-
-    //Variables
+    //Atributos 
     int x, y;
-    
-    /**
-     * Creates new form Login
-     */
-    public Login() {        
+    public Login() {
         initComponents();
-        //Se modifica la fomra de la interfaz, tambien se modifica para que salga centrado
-        this.setLocationRelativeTo(null);//Se dio un valor null o nulo a la locazion posicion relativa del ejecutable
-        AWTUtilities.setWindowOpaque(this, false);//Se asigno un valor falso a la opacidad de la ventana que genera el run del archivo        
+        this.setLocationRelativeTo(this);
+        AWTUtilities.setWindowOpaque(this, false);
     }
 
     /**
@@ -33,161 +27,126 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        JtxtUser = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        JpfPass = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        JbtnIniciar = new javax.swing.JButton();
+        JbtnCancel = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(750, 750));
         setUndecorated(true);
 
         jPanel1.setOpaque(false);
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Password");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(300, 340, 110, 30);
+        JtxtUser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JtxtUser.setBorder(null);
+        JtxtUser.setOpaque(false);
+        jPanel1.add(JtxtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 290, 50));
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Consolas", 1, 48)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Log In");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jLabel3MouseDragged(evt);
-            }
-        });
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel3MousePressed(evt);
-            }
-        });
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(100, 110, 490, 50);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user_txt.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        JpfPass.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JpfPass.setBorder(null);
+        JpfPass.setOpaque(false);
+        jPanel1.add(JpfPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 290, 50));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pass_txt.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 265, -1, -1));
+
+        JbtnIniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/inicio_norm.png"))); // NOI18N
+        JbtnIniciar.setBorder(null);
+        JbtnIniciar.setBorderPainted(false);
+        JbtnIniciar.setContentAreaFilled(false);
+        JbtnIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JbtnIniciar.setFocusPainted(false);
+        JbtnIniciar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/inicio_rol.png"))); // NOI18N
+        JbtnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                JbtnIniciarActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(200, 270, 320, 30);
+        jPanel1.add(JbtnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
 
-        jPasswordField1.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPasswordField1.setBorder(null);
-        jPasswordField1.setOpaque(false);
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(230, 400, 250, 20);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/txt_med_Login.png"))); // NOI18N
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(220, 380, 280, 60);
-
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("User");
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(310, 220, 60, 16);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/txt_grande_Login.png"))); // NOI18N
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(190, 250, 340, 70);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linea_Login.png"))); // NOI18N
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(210, 500, 280, 50);
-
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_grande_Login.png"))); // NOI18N
-        jButton1.setText("LOGIN");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(260, 460, 183, 47);
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cerrar_44_Login.png"))); // NOI18N
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        JbtnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/canc_norm.png"))); // NOI18N
+        JbtnCancel.setBorder(null);
+        JbtnCancel.setBorderPainted(false);
+        JbtnCancel.setContentAreaFilled(false);
+        JbtnCancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JbtnCancel.setFocusPainted(false);
+        JbtnCancel.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/canc_rol.png"))); // NOI18N
+        JbtnCancel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+                JbtnCancelMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(330, 540, 50, 80);
+        JbtnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbtnCancelActionPerformed(evt);
+            }
+        });
+        jPanel1.add(JbtnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/700px-BelizeHole_Login.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 10, 700, 700);
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        jLabel4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel4MouseDragged(evt);
+            }
+        });
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel4MousePressed(evt);
+            }
+        });
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 90));
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/frame.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 450));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void jLabel4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MousePressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_jLabel8MouseClicked
-    
-    private void jLabel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MousePressed
-        // TODO add your handling code here:
-        //A las variables x, y se le asigna el valor de getX y getY
-        x = evt.getX();
+        x = evt.getX();        
         y = evt.getY();
-        
-    }//GEN-LAST:event_jLabel3MousePressed
+    }//GEN-LAST:event_jLabel4MousePressed
 
-    //Evento donde se ingresan los parametros para devolver el movimiento al evento MousePressed
-    private void jLabel3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseDragged
+    private void jLabel4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseDragged
         // TODO add your handling code here:
         this.setLocation(this.getLocation().x + evt.getX() - x, this.getLocation().y + evt.getY() - y);
-    }//GEN-LAST:event_jLabel3MouseDragged
+    }//GEN-LAST:event_jLabel4MouseDragged
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Home open=new Home();
+    private void JbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnCancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JbtnCancelActionPerformed
+
+    private void JbtnCancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JbtnCancelMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_JbtnCancelMouseClicked
+
+    private void JbtnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnIniciarActionPerformed
+        // TODO add your handling code here:
+        Principal open = new Principal();
         open.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_JbtnIniciarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,28 +178,26 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);//Se hace visible el Login
-                try {
-                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-                } catch (Exception e) {
-                    new Login().setVisible(true);//Se hace visible el Login
-                }
+                
+                try{
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                }catch (Exception e){
+                    
+                }                
+                new Login().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton JbtnCancel;
+    private javax.swing.JButton JbtnIniciar;
+    private javax.swing.JPasswordField JpfPass;
+    private javax.swing.JTextField JtxtUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

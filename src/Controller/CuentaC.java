@@ -38,6 +38,6 @@ public class CuentaC {
     }
     
     private void fillComputer(){
-        cuenta.add(new CuentaE(1234,123456789,1234,1234,1234,123456789));
+        cuenta.add(new CuentaE(1234,123456789,1234,123456789));
     }
 }

@@ -7,26 +7,20 @@ package Entity;
 public class CuentaE {
     private int numCuenta;
     private long IdCliente;
-    private int diaAp;
-    private int mesAp;
-    private int anioAp;
+    private int FechaAp;
     private long saldo;
 
     public CuentaE() {
         numCuenta=0;
         IdCliente=0;
-        diaAp=0;
-        mesAp=0;
-        anioAp=0;
+        FechaAp=0;
         saldo=0;
     }
 
-    public CuentaE(int numCuenta, long IdCliente, int diaAp, int mesAp, int anioAp, long saldo) {
+    public CuentaE(int numCuenta, long IdCliente, int Fecha, long saldo) {
         this.numCuenta = numCuenta;
         this.IdCliente = IdCliente;
-        this.diaAp = diaAp;
-        this.mesAp = mesAp;
-        this.anioAp = anioAp;
+        this.FechaAp=Fecha;
         this.saldo = saldo;
     }
 
@@ -45,29 +39,13 @@ public class CuentaE {
     public void setIdCliente(long IdCliente) {
         this.IdCliente = IdCliente;
     }
-
-    public int getDiaAp() {
-        return diaAp;
+    
+    public int getFechaAp(){
+        return FechaAp;
     }
-
-    public void setDiaAp(int diaAp) {
-        this.diaAp = diaAp;
-    }
-
-    public int getMesAp() {
-        return mesAp;
-    }
-
-    public void setMesAp(int mesAp) {
-        this.mesAp = mesAp;
-    }
-
-    public int getAnioAp() {
-        return anioAp;
-    }
-
-    public void setAnioAp(int anioAp) {
-        this.anioAp = anioAp;
+    
+    public void setFechaAp(int Fecha){
+        this.FechaAp = Fecha;
     }
 
     public long getSaldo() {
